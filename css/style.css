@@ -1,0 +1,223 @@
+
+    .page {
+        width: 80%;
+        margin: auto;
+        padding-bottom: 20px;
+        top: 0px;
+    }
+
+    header {
+        font-size: 30px;
+        font-family: 'Source Sans Pro', sans-serif;
+        text-transform: uppercase;
+        color: rgb(249, 83, 166);
+        margin: auto;
+        width: 75%;
+    }
+    .collapsible {
+        font-family: 'Source Sans Pro', sans-serif;
+        background-color: rgb(219, 98, 168); 
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 20px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+        text-align: center; 
+        display:block; 
+        margin-left:auto;
+        margin-right:auto; 
+        width:80%;
+    }
+    h1 {
+        width: 90%;
+        text-align: center;
+    }
+
+    h2 {
+        font-family: 'Source Sans Pro', sans-serif;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    
+    h3 {
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .section {
+        padding: 30px 30px;
+        display: none;
+        overflow: hidden;
+        background-color:rgb(255, 226, 243); 
+    }
+    
+    .thumbnail {
+        display: block;
+        border: 10px solid rgb(248, 164, 213);
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+    }
+
+    p {
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .section li {
+        list-style-type: none;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+    .section li:before {
+        content: '\1F497';
+        margin-left: -20px; 
+        margin-right: 10px;
+    }
+
+    #skip {
+        display: none;
+    }
+
+    .on {
+        color: rgb(199, 195, 195);
+    }
+    .images {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+    .images img{
+        border: 3px solid white;
+        margin: 10px;
+        width: 90%;
+    }
+
+
+
+@media (prefers-reduced-motion: reduce) {
+    .sidenav {
+        transition: 0s;
+    }
+    .sidenav a {
+        transition: 0s;
+    }
+    .gif {
+        animation: none;
+        display:none;
+    }
+}
+@media only screen and (max-width: 599px) {
+    .sidenav {
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: pink;
+        overflow-x: hidden;
+        transition: 0.3s;
+        padding-top: 60px;
+        padding-bottom: 40px;
+    } 
+
+    #on {
+        color: rgb(103, 99, 99);
+        font-weight: bolder;
+    }
+    .sidenav .exitButton {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    .headerBar{
+        display:flex;
+        justify-content:space-between;
+        align-items:center; 
+    }
+    span {
+        font-size: 50px;
+        color: rgb(219, 98, 168); 
+        text-align: center;
+    }
+    .sidenav a {
+        padding: 8px 8px 8px 30px;
+        text-decoration: none;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: normal;
+        font-size: 25px;
+        color: black;
+        display: block;
+        transition: 0.2s;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    #main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
+    }
+
+    .collapsible {
+        font-size: 22px;
+    }
+    h1 {
+        width: 100%;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    p, li{
+        font-size: 24px;
+    }
+    .headerBar{
+        position: sticky; top:0;
+        background-color: rgb(255, 255, 255);
+        width:100%;
+        padding: 0px 0px 20px;
+        z-index:100;
+    }
+    span {
+        display: none;
+    }
+    .sidenav {
+        background-color: rgb(219, 98, 168); 
+        width: 70%;
+        margin: auto;
+        border-radius: 25px;
+        text-align: center;
+        padding: 10px 0 20px;
+        overflow: hidden; 
+        display: flex; 
+        justify-content: center; 
+    }
+      
+    .sidenav a {
+        float: left; 
+        color: black;
+        font-family: 'Source Sans Pro', sans-serif;
+        text-decoration: none;
+        margin: 0 30px;
+        font-size: 20px;
+        
+    }
+    .sidenav .exitButton {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    #skip {
+        display: block;
+    }
+    .sidenav a:hover {
+        color: #f1f1f1;
+    } 
+    .active, .collapsible:hover {
+        background-color: rgb(248, 164, 213);
+    }
+}
